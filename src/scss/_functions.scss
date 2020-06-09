@@ -1,0 +1,3 @@
+@function ff($fontFamily){
+    @return map-get($fonts, $fontFamily);
+}

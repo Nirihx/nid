@@ -1,0 +1,108 @@
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    position: relative;
+    height: 40px;
+    padding-left: 0;
+    padding: 20px;
+    width: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all .8s ease-in-out;
+    .fa{
+        position: absolute;
+        background: #fff;
+        height: 100%;
+        width: 40px;
+        color: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        border-radius: 50px;
+        -webkit-transform: rotate(0deg);
+    }
+    &:hover{
+        padding-left: 40px;
+        width: 150px;
+        .fa{
+            -webkit-transform: rotate(180deg);
+        }
+    }
+}
+.ttr{
+    font-family: ff(ttr);
+    font-size: 2rem;
+    font-weight: normal;
+    color: $secondary;
+    text-align: center;
+    text-transform: uppercase;
+    @include media-breakpoint-down(md){ 
+        font-size: 1.5rem;
+    }
+}
+.sttr{
+    font-family: ff(ttr);
+    font-size: 1.75rem;
+    font-weight: normal;
+    color: $primary;
+    text-align: left;
+    @include media-breakpoint-down(md){ 
+        font-size: 1.25rem;
+    }
+}
+.para{
+    font-family: ff(para);
+    font-size: 1rem;
+    color: $dark;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    @include media-breakpoint-down(md){
+        flex-direction: column;
+    }
+}
+.card{
+    border: none;
+    &:hover{
+        box-shadow: 0 0 8px #CCC;
+        transition: all .3s ease-in-out;
+    }
+    .top{
+        .img{
+            width: 100%;
+        }
+    }
+    .resume{
+        padding: 15px;
+        .ttr{
+            text-align: left;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .sttr{
+            @extend .sttr;
+            font-size: 1rem;
+        }
+        .lh{
+            width: 100%;
+            height: 0;
+            border-top: 1px solid $secondary;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+}
+.noScroll{
+    height: 100vh;
+    overflow: hidden;
+    @include media-breakpoint-down(md){ 
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+}

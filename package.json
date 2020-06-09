@@ -1,0 +1,41 @@
+{
+  "name": "frontend-boilerplate",
+  "version": "1.0.0",
+  "description": "Front-end boilerplate for me using Gulp 4",
+  "main": "gulpfile.js",
+  "keywords": [
+    "gulp",
+    "boilerplate",
+    "html",
+    "scss",
+    "css",
+    "javascript"
+  ],
+  "author": "@nirihx",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "autoprefixer": "^9.7.0",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.1.1",
+    "gulp-image": "^6.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "bootstrap": "^4.4.1",
+    "gsap": "^3.2.6",
+    "jquery": "^3.5.0",
+    "scrollmagic": "^2.0.7",
+    "slick-carousel": "^1.8.1"
+  }
+}

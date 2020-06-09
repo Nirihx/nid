@@ -1,0 +1,147 @@
+@import "utils";
+body{
+    background: $light;
+}
+.header{
+    @extend %header;
+} // end header 
+
+// @import "parts/page/utils";
+.section{
+    position: relative;
+    width: 100%;
+    .article{
+        position: relative;
+        width: 100%;
+        margin-top: 50px;
+    }
+    &:nth-of-type(1){
+        .article{
+            &:nth-child(1){
+                .card{
+                    width: 30%;
+                }                
+            }
+            &:nth-child(2){
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .grid{
+                    width: 50%;
+                }
+                .bg{
+                    position: relative;
+                    background: $dark;
+                    width: calc(100% - 75px);
+                    padding: 75px 0 75px 75px;
+                    .ttr{
+                        text-align: right;
+                        color: #FFF;
+                    }
+                    .img{
+                        position: relative;
+                        width: calc(100% + 75px);
+                    }
+                }
+                .bg2{
+                    position: relative;
+                    background: $secondary;
+                    width: 450px;
+                    margin-left: auto;
+                    margin-right: 105px;
+                    padding-left: 30px;
+                    .resume{
+                        position: relative;
+                        bottom: -30px;
+                        background: #FFF;
+                        width: calc(100% + 30px);
+                        height: 100%;
+                        padding: 15px;
+                        .ttr{
+                            color: $dark;
+                            text-transform: none;
+                            font-size: 1.75rem;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &:nth-of-type(2){
+        .article{
+            .content{
+            flex-flow: row wrap;
+                .grid{
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    flex-flow: row wrap;
+                    width: 50%;
+                    justify-content: center;
+                    height: 400px;
+                    overflow: hidden;
+                    .sgrid{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        overflow: hidden;
+                        border: 1px solid #FFF;
+                        .mask{                            
+                            position: absolute;
+                            top: 0;
+                            opacity: 0;
+                            left: auto;
+                            right: -100%;
+                            width: 100%;
+                            height: 100%;
+                            padding: 15px 10px;
+                            background: #FFF;
+                            transition: all .6s ease;
+                            .ttr{
+                                text-align: left;
+                            }
+                        }
+                        &:hover .mask{
+                            right: 0;
+                            opacity: 1;
+                        }
+                        .img{
+                            width: 100%;
+                            object-fit: cover;
+                            height: 100%;
+                            object-position: bottom center;
+                        }
+                    }
+                    &:nth-of-type(1){ 
+                       .sgrid{
+                           width: 100%;
+                       }
+                    }
+                    &:nth-child(2){
+                       .sgrid{
+                           height: 50%;
+                           width: 50%;
+                       }
+                    }
+                    &:nth-child(3){
+                       height: 200px; 
+                       .sgrid{
+                           width: 50%;
+                       }
+                    }
+                    &:nth-child(4){
+                       height: 200px; 
+                       .sgrid{
+                           width: 100%;
+                       }
+                    }
+
+                }
+            }
+        }
+    }
+}
+.footer{
+    // @extend %footer;
+} // end footer
