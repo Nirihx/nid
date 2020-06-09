@@ -15963,6 +15963,8 @@ readers do not read off random characters that represent icons */
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  background: rgba(0, 0, 0, 0.75);
+  padding-left: 30px;
 }
 @media (max-width: 991.98px) {
   .bannerContent .content {
@@ -15972,6 +15974,7 @@ readers do not read off random characters that represent icons */
 }
 .bannerContent .content .ttr {
   text-align: left;
+  color: #FFF;
 }
 .bannerContent .content .resume {
   width: 40%;
@@ -15985,6 +15988,9 @@ readers do not read off random characters that represent icons */
     background: rgba(0, 0, 0, 0.5);
     color: #FFF;
   }
+}
+.bannerContent .content .resume .para {
+  color: #FFF;
 }
 @media (max-width: 991.98px) {
   .bannerContent .content .banner {

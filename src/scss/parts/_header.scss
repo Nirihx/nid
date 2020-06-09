@@ -52,12 +52,15 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        background: rgba(0,0,0,.75);
+        padding-left: 30px;
         @include media-breakpoint-down(md){
             flex-direction: column;
             margin-top: 75px;
         }
         .ttr{
             text-align: left;
+            color: #FFF;
         }
         .resume{
             width: 40%;
@@ -67,6 +70,9 @@
                 top: 0;
                 z-index: 9;
                 background: rgba(0,0,0,.5);
+                color: #FFF;
+            }
+            .para{
                 color: #FFF;
             }
         }
