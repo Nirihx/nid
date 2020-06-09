@@ -1,8 +1,6 @@
 node_modules/
 dist/*.zip
 dist/*.rar
-dist/svg/
-dist/
 docs/
 *.zip
 test.*

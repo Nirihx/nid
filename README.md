@@ -17,5 +17,5 @@
 
 ## Option facultatif
 * pour compiler les fichier sass/scss avec dartsass
-`sass --watch src/ny/scss/style.scss:dist/ny/css/style.css --style compressed`
+`sass --watch src/scss/style.scss:dist/css/style.css --style compressed`
 
