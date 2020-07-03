@@ -66,6 +66,7 @@ function cacheBustTask(){
     // var cbString = new Date().getTime();
     return src([
         projetSourceName + '/index.html', 
+        projetSourceName + '/home.html', 
     ])
     // .pipe(replace(/cb=\d+/g, 'cb=' + cbString))
     .pipe(fileinclude({

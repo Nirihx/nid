@@ -72,6 +72,9 @@ body{
                         width: calc(100% + 30px);
                         height: 100%;
                         padding: 15px;
+                        @include media-breakpoint-down(md){
+                            width: auto;
+                        }
                         .ttr{
                             color: $dark;
                             text-transform: none;

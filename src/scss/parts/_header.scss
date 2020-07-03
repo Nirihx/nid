@@ -13,7 +13,7 @@
         -webkit-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
         @include media-breakpoint-down(md){
-            margin-bottom: -45px;
+            margin-bottom: 0;
         }
         .contentNav{
             position: fixed;
