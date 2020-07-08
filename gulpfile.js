@@ -79,10 +79,10 @@ function cacheBustTask(){
 
 // Watch task
 function watchTask(){
-    watch([files.jsPath, files.htmlPath],        
+    watch([files.scssPath, files.jsPath, files.htmlPath],        
         {interval: 200, usePolling: true}, //Makes docker work
         series(
-            parallel(jsTask),
+            parallel(scssTask, jsTask),
             cacheBustTask
         )
     );

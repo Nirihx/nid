@@ -1,3 +1,15 @@
+@keyframes spinExt { 
+    100% {
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+@keyframes spinInt { 
+    100% {
+        -webkit-transform: rotate(-360deg); 
+        transform:rotate(-360deg); 
+    } 
+}
 .splash{
     overflow: hidden;
     .section{
@@ -10,15 +22,18 @@
         align-items: center;
         .article{
             position: relative;
-            width: 550px;
-            height: 550px;
+            width: 650px;
+            height: 650px;
             margin: auto;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-flow: row wrap;
-            animation: spin 80s linear infinite;
-            @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+            // animation: spinExt 200s linear infinite;  
+            @include media-breakpoint-down(sm){
+                width: 320px;
+                height: 320px;
+            }
             .grid{
                 position: absolute;
                 display: flex;
@@ -26,7 +41,42 @@
                 height: 50%;
                 .triangle{                    
                     transform: scale(1) translate(0);
-                    transition: all ease .8s;
+                    transition: all ease .8s;                    
+                    .content{
+                        position: relative;
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        .ttr{
+                            position: relative;
+                            font-size: 1.25rem;
+                            text-align: left;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            .lh{
+                                display: block;
+                                width: 80px;
+                                position: relative;
+                                height: 0;
+                                border-top: 1px solid #c1c1c1;
+                                margin: 5px auto;
+                            }
+                            .small{
+                                text-align: center;
+                                text-transform: none;
+                                color: #607D8B;
+                            }
+                        }
+                        .fa, .fab{
+                            display: block;
+                            position: absolute;
+                            color: #FFF;
+                        }
+                    }
                 }
                 &:nth-child(1){
                     left: 0;
@@ -42,16 +92,30 @@
                         height: 100%;
                         &:hover{
                             position: absolute;
-                            z-index: 99;
-                            transform: scale(1.5) translateX(-20px);
+                            transform: scale(1.2) translateX(-20px);
                         }
                         svg{
                             position: absolute;
                             height: 100%;
                             width: 100%;
                             &:nth-child(2){
+                                width: 115%;
                                 transform: rotate(0deg);     
                                 filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));                               
+                            }
+                        }
+                        .content{
+                            .ttr{
+                                color: #f05252;
+                                margin-left: 73px;
+                                margin-right: auto; 
+                                .lh{
+                                    margin-left: -10px;
+                                }                               
+                            }
+                            .fa{
+                                font-size: 1.75rem;
+                                right: 90px;
                             }
                         }
                     }
@@ -70,8 +134,7 @@
                         height: 100%;
                         &:hover{
                             position: absolute;
-                            z-index: 99;
-                            transform: scale(1.5) translateY(-20px);
+                            transform: scale(1.2) translateY(-20px);
                         }
                         svg{
                             position: absolute;
@@ -80,6 +143,15 @@
                             &:nth-child(2){
                                 transform: rotate(90deg);     
                                 filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+                            }
+                        }
+                        .content{
+                            .ttr{
+                                color: #48aa44;
+                            }
+                            .fa{
+                                font-size: 1.5rem;
+                                bottom: 85px;
                             }
                         }
                     }
@@ -98,8 +170,7 @@
                         height: 100%;
                         &:hover{
                             position: absolute;
-                            z-index: 99;
-                            transform: scale(1.5) translateY(20px);
+                            transform: scale(1.2) translateY(20px);
                         }
                         svg{
                             position: absolute;
@@ -108,6 +179,16 @@
                             &:nth-child(2){
                                 transform: rotate(270deg);     
                                 filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+                            }
+                        }
+                        .content{
+                            .ttr{
+                                color: #e9af34;
+                                text-align: center;
+                            }
+                            .fa{
+                                font-size: 1.5rem;
+                                top: 85px;
                             }
                         }
                     }
@@ -126,22 +207,51 @@
                         height: 100%;
                         &:hover{
                             position: absolute;
-                            z-index: 99;
-                            transform: scale(1.5) translateX(20px);
+                            transform: scale(1.2) translateX(20px);
                         }
                         svg{
                             position: absolute;
                             height: 100%;
                             width: 100%;
                             &:nth-child(2){
+                                width: 85%;
                                 transform: rotate(180deg);     
                                 filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
                             }
                         }
+                        .content{
+                            .ttr{
+                                color: #2190bc;
+                                margin-left: 154px;
+                                .lh{
+                                    margin-right: 64px;
+                                }
+                                .small{
+                                    text-align: right;
+                                    width: 54%;
+                                }
+                            }
+                            .fab{
+                                font-size: 2rem;
+                                left: 90px;
+                            }
+                        }
                     }
-                }
-                
-                
+                }                
+            }
+        } // end article
+        .footer{
+            position: absolute;
+            margin: auto;
+            background: #FFF;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: spinInt 90s linear infinite; 
+            .ronded{
             }
         }
     }
